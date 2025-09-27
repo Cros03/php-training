@@ -26,10 +26,6 @@ RUN apt-get update \
         pdo_mysql \
         mysqli \
         && docker-php-ext-enable pdo_mysql mysqli
-# Redis extension (chỉ định version ổn định cho PHP 8.3)
-RUN pecl install redis-6.0.2 \
-    && docker-php-ext-enable redis
-
 
 RUN pecl install xdebug \
     && docker-php-ext-enable xdebug
